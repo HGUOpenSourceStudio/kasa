@@ -1,10 +1,10 @@
 import './Locations.scss';
 import Location from '../Location/Location';
 
-function Locations({ rooms }) {
+function Locations({ rooms, includeFee }) {
     return (
         <div className="App-main-locations">
-            {rooms.map((room) => <Location key={room.id} logement={room} />)}
+            {rooms.map((room) => <Location key={room.id} logement={room} includeFee={includeFee} />)}
         </div>
     );
 }

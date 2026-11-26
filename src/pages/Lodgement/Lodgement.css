@@ -26,3 +26,6 @@
 .lodgement-host-name {
     white-space: nowrap;
 }
+
+.lodgement-heading { display: flex; align-items: center; gap: 12px; }
+.lodgement-heading .favorite { background: var(--paper); flex: none; }

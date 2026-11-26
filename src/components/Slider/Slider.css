@@ -1,0 +1,5 @@
+.slider-buttons { display: flex; justify-content: flex-end; gap: 8px; margin-bottom: 16px; }
+.slider-buttons button { width: 44px; height: 44px; border-radius: 50%; border: 1px solid #d8d5d0; background: #fff; cursor: pointer; }
+.slider-buttons button:hover { background: var(--ink); color: #fff; }
+.slider-track { display: grid; grid-auto-flow: column; grid-auto-columns: min(360px, 82%); gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 20px; }
+.slider-track > * { scroll-snap-align: start; }

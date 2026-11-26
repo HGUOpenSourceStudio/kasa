@@ -21,3 +21,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# AI 생성 원본 영상 (사이트는 hero.mp4, closing.mp4만 사용)
+public/videos/gemini_*.mp4

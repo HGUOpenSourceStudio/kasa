@@ -10,7 +10,7 @@ import './MapPage.css';
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
 import RegionFilter from '../../components/RegionFilter/RegionFilter';
-import { formatPrice, useZoneFilter } from '../../utils/rooms';
+import { formatPrice, useRoomFilter } from '../../utils/rooms';
 
 // CRA 번들에서는 기본 마커 이미지 경로가 깨지므로 직접 지정한다.
 const icon = L.icon({
@@ -23,7 +23,7 @@ const icon = L.icon({
 });
 
 function MapPage() {
-    const { selectedZones, setSelectedZones, filteredRooms } = useZoneFilter();
+    const { filters, setFilters, filteredRooms, query } = useRoomFilter();
     const bounds = filteredRooms.map((room) => [room.lat, room.lng]);
 
     return (
@@ -33,12 +33,13 @@ function MapPage() {
             </header>
             <main>
                 <div className="map-toolbar">
-                    <RegionFilter selectedZones={selectedZones} onChange={setSelectedZones} />
-                    <Link to={{ pathname: '/', search: selectedZones.map((z) => `zone=${encodeURIComponent(z)}`).join('&') }}>목록으로</Link>
+                    <RegionFilter selectedZones={filters.zones} onChange={(zones) => setFilters({ zones })} />
+                    <Link to={{ pathname: '/', search: query }}>목록으로</Link>
                 </div>
                 <p className="map-count">{filteredRooms.length}개의 방 · 위치는 예시 좌표입니다</p>
-                {/* key: 필터가 바뀌면 선택한 방들이 모두 보이도록 지도를 다시 맞춘다. */}
-                <MapContainer key={selectedZones.join()} className="room-map" bounds={bounds} boundsOptions={{ padding: [40, 40] }}>
+                {/* key: 필터가 바뀌면 선택한 방들이 모두 보이도록 지도를 다시 맞춘다. 결과가 없으면 포항 중심을 보여준다. */}
+                <MapContainer key={query} className="room-map" boundsOptions={{ padding: [40, 40] }}
+                    {...(bounds.length ? { bounds } : { center: [36.085, 129.39], zoom: 13 })}>
                     <TileLayer
                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                         url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -48,7 +49,7 @@ function MapPage() {
                             <Popup>
                                 <strong>{room.title}</strong>
                                 <br />
-                                {formatPrice(room)}
+                                {formatPrice(room, filters.includeFee)}
                                 <br />
                                 <Link to={`/lodgement/${room.id}`}>상세 보기 →</Link>
                             </Popup>

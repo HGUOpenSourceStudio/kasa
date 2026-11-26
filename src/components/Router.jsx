@@ -6,6 +6,7 @@ import Lodgement from '../pages/Lodgement/Lodgement';
 import Error404 from '../pages/Page404/Page404';
 import Error from '../pages/Error/Error';
 import MapPage from '../pages/MapPage/MapPage';
+import Favorites from '../pages/Favorites/Favorites';
 
 function RooterComponent() {
     return (
@@ -14,6 +15,7 @@ function RooterComponent() {
                 <Routes>
                     <Route path="/" element={<Home />} name="홈" errorElement={<Error />} />
                     <Route path="/map" element={<MapPage />} name="지도" errorElement={<Error />} />
+                    <Route path="/favorites" element={<Favorites />} name="찜" errorElement={<Error />} />
                     <Route path="/about" element={<About />} name="소개" errorElement={<Error />} />
                     <Route path="/lodgement/:id" element={<Lodgement />} name="상세" errorElement={<Error />} />
                     <Route path="/error" element={<Error />} name="500" errorElement={<Error />} />

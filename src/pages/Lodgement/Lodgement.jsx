@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 
 import './Lodgement.scss';
 import './Lodgement.css';
+import FavoriteButton from '../../components/FavoriteButton/FavoriteButton';
 import Navbar from '../../components/Navbar/Navbar';
 import Carousel from '../../components/Carousel/Carousel';
 import Tag from '../../components/Tag/Tag';
@@ -35,7 +36,10 @@ function Lodgement(props) {
             <main>
                 <div className='lodgement-main-content'>
                     <div className='lodgement-title-description'>
-                        <h1 className='lodgement-title'>{el.title}</h1>
+                        <div className='lodgement-heading'>
+                            <h1 className='lodgement-title'>{el.title}</h1>
+                            <FavoriteButton id={el.id} title={el.title} />
+                        </div>
                         <p className='lodgement-location'>{el.address}</p>
                         <dl className='lodgement-price'>
                             <div><dt>보증금</dt><dd>{el.deposit}만원</dd></div>
