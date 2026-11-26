@@ -14,15 +14,15 @@ class Navbar extends Component {
         return (
             <nav className="App-nav">
                 <div className="App-nav-logo">
-                    <img className="logo" src={logo} alt="logo" />
+                    <img className="logo" src={logo} alt="Homez" />
                 </div>
                 <div className="App-nav-links">
                     <ul className="App-nav-list">
                         <li className="App-nav-list-link">
-                            <NavLink to="/" activeclassname="active">Accueil</NavLink>
+                            <NavLink to="/" activeclassname="active">홈</NavLink>
                         </li>
                         <li className="App-nav-list-link">
-                            <NavLink to="/about" activeclassname="active">A propos</NavLink>
+                            <NavLink to="/about" activeclassname="active">소개</NavLink>
                         </li>
                     </ul>
                 </div>

@@ -22,10 +22,10 @@ class About extends Component {
                 </header>
                 <main>
                     <div className="App-collapses-container">
-                        <Collapse title={'Fiabilité'} text={`Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes.`}></Collapse>
-                        <Collapse title={'Respect'} text={`La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.`}></Collapse>
-                        <Collapse title={'Service'} text={`La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.`}></Collapse>
-                        <Collapse title={'Sécurité'} text={`La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes.`}></Collapse>
+                        <Collapse title={'서비스 소개'} text={'한동대 인근 자취방의 보증금, 월세, 관리비를 한눈에 비교하는 학생 팀 프로젝트입니다.'}></Collapse>
+                        <Collapse title={'지역 필터'} text={'원하는 권역을 여러 개 골라 비교할 수 있습니다.'}></Collapse>
+                        <Collapse title={'지도 탐색'} text={'지도에서 방의 위치를 확인하고 상세 페이지로 이동할 수 있습니다.'}></Collapse>
+                        <Collapse title={'주의'} text={'표시되는 매물은 과제용 예시 데이터이며 실제 매물이 아닙니다.'}></Collapse>
                     </div>
                 </main>
                 <Footer></Footer>

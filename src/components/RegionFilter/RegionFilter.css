@@ -1,0 +1,36 @@
+.region-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.region-filter legend {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+}
+
+.region-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    border: 1px solid #ff6060;
+    border-radius: 999px;
+    color: #ff6060;
+    cursor: pointer;
+}
+
+.region-chip.checked {
+    background: #ff6060;
+    color: #fff;
+}
+
+.region-chip input {
+    accent-color: #fff;
+}

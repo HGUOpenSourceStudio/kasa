@@ -12,10 +12,10 @@ class Footer extends Component {
         return (
             <footer className="App-footer">
                 <div className="App-footer-logo">
-                    <img className="logo" src={logo} alt="logo" />
+                    <img className="logo" src={logo} alt="Homez" />
                 </div>
                 <div className="App-footer-description">
-                    <p>© 2020 Kasa. All rights reserved</p>
+                    <p>© 2026 구해줘 홈즈 · Based on Kasa (MIT)</p>
                 </div>
             </footer>
         );

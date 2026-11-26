@@ -1,24 +1,18 @@
-import { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './Location.scss';
+import './Location.css';
+import { formatPrice } from '../../utils/rooms';
 
-class Location extends Component {
-    constructor(props) {
-        super(props);
-        this.state = { logement: {} };
-    }
-
-    componentDidMount() {
-        this.setState({ logement: this.props.logement });
-    }
-
-    render() {
-        return (
-            <a className="App-main-location" style={{backgroundImage: 'url(' + this.state.logement.cover + ')' }} href={'/lodgement/' + this.state.logement.id}>
-                <div className='App-main-location-overlay'></div>
-                <h2 className='App-main-location-title'>{this.state.logement.title}</h2>
-            </a>
-        );
-    }
+function Location({ logement }) {
+    return (
+        <Link className="App-main-location" style={{ backgroundImage: `url(${logement.cover})` }} to={`/lodgement/${logement.id}`}>
+            <div className="App-main-location-overlay"></div>
+            <div className="location-info">
+                <h2>{logement.title}</h2>
+                <p>{formatPrice(logement)}</p>
+            </div>
+        </Link>
+    );
 }
 
 export default Location;

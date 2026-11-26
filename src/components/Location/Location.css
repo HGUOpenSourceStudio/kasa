@@ -1,0 +1,25 @@
+.App-main-locations .App-main-location {
+    display: block;
+    text-decoration: none;
+}
+
+.location-info {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 20px 24px;
+    color: #fff;
+    background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.7));
+    border-radius: 0 0 10px 10px;
+}
+
+.location-info h2 {
+    margin: 0 0 4px;
+    font-size: 20px;
+}
+
+.location-info p {
+    margin: 0;
+    font-weight: 600;
+}
