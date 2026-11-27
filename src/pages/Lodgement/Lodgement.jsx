@@ -2,6 +2,8 @@ import { useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 
 import './Lodgement.scss';
+import './Lodgement.css';
+import FavoriteButton from '../../components/FavoriteButton/FavoriteButton';
 import Navbar from '../../components/Navbar/Navbar';
 import Carousel from '../../components/Carousel/Carousel';
 import Tag from '../../components/Tag/Tag';
@@ -34,8 +36,16 @@ function Lodgement(props) {
             <main>
                 <div className='lodgement-main-content'>
                     <div className='lodgement-title-description'>
-                        <h1 className='lodgement-title'>{el.title}</h1>
-                        <p className='lodgement-location'>{el.location}</p>
+                        <div className='lodgement-heading'>
+                            <h1 className='lodgement-title'>{el.title}</h1>
+                            <FavoriteButton id={el.id} title={el.title} />
+                        </div>
+                        <p className='lodgement-location'>{el.address}</p>
+                        <dl className='lodgement-price'>
+                            <div><dt>보증금</dt><dd>{el.deposit}만원</dd></div>
+                            <div><dt>월세</dt><dd>{el.monthlyRent}만원</dd></div>
+                            <div><dt>관리비</dt><dd>{el.maintenanceFee}만원</dd></div>
+                        </dl>
                         <div className='lodgement-tags'>
                             {el.tags.map((tag, i) => 
                                 <Tag key={i} name={tag}></Tag>
@@ -63,8 +73,8 @@ function Lodgement(props) {
                     </div>
                 </div>
                 <div className='lodgement-description-collapses'>
-                    <Collapse title={'Description'} text={el.description}></Collapse>
-                    <Collapse title={'Équipements'} text={el.equipments.join('\n')}></Collapse>
+                    <Collapse title={'상세 설명'} text={el.description}></Collapse>
+                    <Collapse title={'옵션'} text={el.options.join('\n')}></Collapse>
                 </div>
             </main>
             <Footer></Footer>

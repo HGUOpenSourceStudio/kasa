@@ -1,0 +1,7 @@
+.closing { position: relative; min-height: 90vh; display: grid; place-items: center; overflow: hidden; color: #fff; text-align: center; background-size: cover; background-position: center; }
+.closing video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.closing-shade { position: absolute; inset: 0; background: rgb(0 0 0 / .45); }
+.closing .closing-content { position: relative; padding: 24px; }
+.closing h2 { margin: 0 0 16px; font-size: clamp(36px, 7vw, 92px); line-height: 1.12; letter-spacing: -.03em; }
+.closing h2 span { display: block; font-weight: 300; }
+.closing h2 strong { display: block; }

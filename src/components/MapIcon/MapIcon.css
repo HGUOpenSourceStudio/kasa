@@ -1,0 +1,11 @@
+.map-icon {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border: 1px solid #ff6060;
+    border-radius: 8px;
+    color: #ff6060;
+    font-weight: 600;
+    text-decoration: none;
+}

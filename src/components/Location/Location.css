@@ -1,0 +1,15 @@
+.room-card { position: relative; }
+.room-card .App-main-location {
+    display: block; position: relative; height: 340px; overflow: hidden; text-decoration: none;
+    border-radius: var(--radius); background-color: #d9cfc4; background-size: cover; background-position: center;
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+.room-card .App-main-location:hover { transform: translateY(-4px); box-shadow: 0 18px 40px rgb(0 0 0 / .18); }
+.room-card .room-type { position: absolute; top: 14px; left: 14px; }
+.room-card .room-favorite { position: absolute; top: 10px; right: 10px; }
+.location-info {
+    position: absolute; left: 0; right: 0; bottom: 0; padding: 48px 22px 20px; color: #fff;
+    background: linear-gradient(180deg, transparent, rgb(0 0 0 / .75));
+}
+.location-info h3 { margin: 0 0 4px; font-size: 19px; word-break: keep-all; }
+.location-info p { margin: 0; font-weight: 600; }

@@ -1,0 +1,6 @@
+.home .site-footer { width: 100%; margin-left: 0; }
+.results { scroll-margin-top: 70px; }
+.section-head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px; margin-bottom: 24px; }
+.results .App-main-locations { padding: 0; background: none; gap: 24px; }
+.empty { padding: 48px; border-radius: var(--radius); background: var(--paper); text-align: center; }
+.built { margin: 10px 4px 0; font-size: 13px; color: var(--muted); }

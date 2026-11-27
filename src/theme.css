@@ -1,0 +1,33 @@
+:root {
+    --ink: #1f1e1c;
+    --muted: #6b6864;
+    --paper: #f5f5f5;
+    --accent: #ff6060;
+    --accent-strong: #d93a3a;
+    --radius: 16px;
+    --section: clamp(56px, 8vw, 120px);
+    --wrap: min(1240px, 100% - 32px);
+}
+body { color: var(--ink); background: #fff; }
+button, input, select { font: inherit; }
+:focus-visible { outline: 3px solid var(--accent-strong); outline-offset: 2px; }
+
+.wrap { width: var(--wrap); margin-inline: auto; }
+.section { padding-block: var(--section); }
+.section.tint { background: var(--paper); }
+.eyebrow { margin: 0 0 12px; font-size: 12px; font-weight: 700; letter-spacing: .14em; color: var(--accent-strong); }
+.title { margin: 0 0 16px; font-size: clamp(28px, 4vw, 44px); font-weight: 300; line-height: 1.25; letter-spacing: -.02em; word-break: keep-all; }
+.title strong { display: block; font-weight: 700; }
+.lead { margin: 0; max-width: 46ch; color: var(--muted); line-height: 1.7; word-break: keep-all; }
+.pill {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    padding: 12px 22px; border: 0; border-radius: 999px; cursor: pointer;
+    background: var(--accent-strong); color: #fff; font-weight: 700; text-decoration: none;
+}
+.pill.ghost { background: transparent; color: var(--ink); border: 1px solid #d8d5d0; }
+.badge { display: inline-block; padding: 3px 10px; border-radius: 999px; background: rgb(0 0 0 / .55); color: #fff; font-size: 11px; }
+
+.App-page > main > .title { margin-top: 32px; }
+.region-chip, .map-icon { background: #fff; }
+.room-map { border-radius: var(--radius); }
+.App-collapse .App-collapse-head { background-color: var(--ink); }
